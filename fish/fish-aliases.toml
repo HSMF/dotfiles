@@ -1,0 +1,13 @@
+aliases = []
+# [[aliases]]
+# name = "cd"
+# value = "pushd"
+#
+#
+# [[aliases]]
+# name = "1"
+# value = "popd"
+#
+# [[aliases]]
+# name = "1"
+# value = "popd"

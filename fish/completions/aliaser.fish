@@ -1,0 +1,18 @@
+complete -c aliaser -n "__fish_use_subcommand" -s s -l shell -d 'specify the shell' -r -f -a "{bash	,zsh	,fish	}"
+complete -c aliaser -n "__fish_use_subcommand" -s h -l help -d 'Print help'
+complete -c aliaser -n "__fish_use_subcommand" -s V -l version -d 'Print version'
+complete -c aliaser -n "__fish_use_subcommand" -f -a "alias" -d 'generate aliases for SHELL'
+complete -c aliaser -n "__fish_use_subcommand" -f -a "env" -d 'generate environment variable declarations for SHELL'
+complete -c aliaser -n "__fish_use_subcommand" -f -a "complete" -d 'Generate shell completions for SHELL'
+complete -c aliaser -n "__fish_use_subcommand" -f -a "path" -d 'Sets the PATH variable'
+complete -c aliaser -n "__fish_use_subcommand" -f -a "help" -d 'Print this message or the help of the given subcommand(s)'
+complete -c aliaser -n "__fish_seen_subcommand_from alias" -s h -l help -d 'Print help'
+complete -c aliaser -n "__fish_seen_subcommand_from env" -s h -l help -d 'Print help'
+complete -c aliaser -n "__fish_seen_subcommand_from complete" -s h -l help -d 'Print help'
+complete -c aliaser -n "__fish_seen_subcommand_from path" -s a -l additional -d 'additional path variables, not set in FILE' -r
+complete -c aliaser -n "__fish_seen_subcommand_from path" -s h -l help -d 'Print help'
+complete -c aliaser -n "__fish_seen_subcommand_from help; and not __fish_seen_subcommand_from alias; and not __fish_seen_subcommand_from env; and not __fish_seen_subcommand_from complete; and not __fish_seen_subcommand_from path; and not __fish_seen_subcommand_from help" -f -a "alias" -d 'generate aliases for SHELL'
+complete -c aliaser -n "__fish_seen_subcommand_from help; and not __fish_seen_subcommand_from alias; and not __fish_seen_subcommand_from env; and not __fish_seen_subcommand_from complete; and not __fish_seen_subcommand_from path; and not __fish_seen_subcommand_from help" -f -a "env" -d 'generate environment variable declarations for SHELL'
+complete -c aliaser -n "__fish_seen_subcommand_from help; and not __fish_seen_subcommand_from alias; and not __fish_seen_subcommand_from env; and not __fish_seen_subcommand_from complete; and not __fish_seen_subcommand_from path; and not __fish_seen_subcommand_from help" -f -a "complete" -d 'Generate shell completions for SHELL'
+complete -c aliaser -n "__fish_seen_subcommand_from help; and not __fish_seen_subcommand_from alias; and not __fish_seen_subcommand_from env; and not __fish_seen_subcommand_from complete; and not __fish_seen_subcommand_from path; and not __fish_seen_subcommand_from help" -f -a "path" -d 'Sets the PATH variable'
+complete -c aliaser -n "__fish_seen_subcommand_from help; and not __fish_seen_subcommand_from alias; and not __fish_seen_subcommand_from env; and not __fish_seen_subcommand_from complete; and not __fish_seen_subcommand_from path; and not __fish_seen_subcommand_from help" -f -a "help" -d 'Print this message or the help of the given subcommand(s)'
