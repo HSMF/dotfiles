@@ -1,0 +1,9 @@
+#!/bin/sh
+tmux new-session \;\
+    rename-session "$(project-name)" \;\
+    rename-window 'build' \;\
+    new-window 'nvim' \;\
+    rename-window 'nvim' \;\
+    new-window \;\
+    select-window -t 1\;\
+    attach
