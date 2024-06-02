@@ -1,0 +1,117 @@
+#!/bin/zsh
+
+[[env]]
+name = "XDG_CONFIG_HOME"
+value = "$HOME/.config"
+
+# [[env]]
+# name = "DBUS_SESSION_BUS_ADDRESS"
+# value = "unix:path=$(launchctl getenv DBUS_LAUNCHD_SESSION_BUS_SOCKET)"
+
+[[env]]
+name = "LESSHISTFILE"
+value = "$HOME/.local/logs/lesshst"
+
+[[env]]
+name = "MYSQL_HISTFILE"
+value = "$HOME/.local/logs/mysql_history"
+
+[[env]]
+name = "NODE_REPL_HISTORY"
+value = "$HOME/.local/logs/node_repl_history"
+
+[[env]]
+name = "TASKRC"
+value = "$HOME/.config/taskrc"
+
+[[env]]
+name = "ETH"
+value = "$HOME/eth/5"
+
+[[env]]
+name = "SSL_CERT_FILE"
+value = "$(python3 -m certifi)"
+
+[[env]]
+name = "REQUESTS_CA_BUNDLE"
+value = "$(python3 -m certifi)"
+
+[[env]]
+name = "COWPATH"
+value = "/usr/local/share/cows:$HOME/.local/share/cowsay/cowfiles"
+
+# [[env]]
+# name = "TERMINFO"
+# value = "$HOME/.local/share/terminfo"
+
+[[env]]
+name = "NVIM_LISTEN_ADDRESS"
+value = "$(printf \"%snvim-address\" $TMPDIR)"
+
+[[env]]
+name = "PYTHONSTARTUP"
+value = "$HOME/.config/python/startup.py"
+
+[[env]]
+name = "PSQL_HISTORY"
+value = "~/.local/logs/psqlhistory"
+
+[[env]]
+name = "FZF_CTRL_R_OPTS"
+value = """
+  --preview 'echo {}' --preview-window up:3:hidden:wrap\
+  --bind 'ctrl-/:toggle-preview'\
+  --bind 'ctrl-y:execute-silent(echo -n {2..} | pbcopy)+abort'\
+  --color header:italic\
+  --header 'Press CTRL-Y to copy command into clipboard'\
+"""
+
+[[env]]
+name = "CLICOLOR"
+value = "1"
+
+[[env]]
+name = "EDITOR"
+value = "nvim"
+
+
+[[env]]
+name = "LC_ALL"
+value = 'en_US.UTF-8'
+
+[[env]]
+name = "LC_CTYPE"
+value = 'en_US.UTF-8'
+
+# [[env]]
+# name = "RUSTC_WRAPPER"
+# value = "sccache"
+
+[[env]]
+name = "LATEXINDENT_CONFIG"
+value = "$HOME/.config/latexindent/indentconfig.yaml"
+
+[[env]]
+name = "PF_ASCII"
+value = "Catppuccin"
+
+[[env]]
+name = "MANPAGER"
+# value = "sh -c 'col -bx | bat -l man -p'"
+value = "nvim +Man!"
+
+[[env]]
+name = "Z3_EXE"
+value = "/bin/z3"
+
+[[env]]
+name = "OPAMROOT"
+value = "$HOME/.local/state/opam/"
+
+[[env]]
+name = "TOPIARY_LANGUAGE_DIR"
+value = "$HOME/opt/topiary/topiary-queries/queries"
+
+[[env]]
+name = "TEXINPUTS"
+value = ".:$HOME/.local/share/:$TEXINPUTS"

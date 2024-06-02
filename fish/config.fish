@@ -1,7 +1,23 @@
 # bootstrap path
 set -gx PATH (~/.cargo/bin/aliaser -s fish path ~/.config/path) $PATH
-aliaser -s fish alias  ~/.config/aliases.toml | source
-aliaser -s fish env ~/.config/envs.toml | source
+
+if test -e ~/.config/aliases-base.toml
+    aliaser -s fish alias  ~/.config/aliases-base.toml | source
+end
+if test -e ~/.config/envs-base.toml
+    aliaser -s fish env ~/.config/envs-base.toml | source
+end
+
+if test -e ~/.config/aliases.toml
+    aliaser -s fish alias  ~/.config/aliases.toml | source
+end
+if test -e ~/.config/envs.toml
+    aliaser -s fish env ~/.config/envs.toml | source
+end
+
+
+# aliaser -s fish alias  ~/.config/aliases.toml | source
+# aliaser -s fish env ~/.config/envs.toml | source
 
 # fish only aliases
 aliaser -s fish alias ~/.config/fish/fish-aliases.toml | source
