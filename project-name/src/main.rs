@@ -13,6 +13,10 @@ use glob::glob_with;
 struct Cli {
     path: Option<PathBuf>,
 
+    /// prints the full path to the detected root instead of just its name
+    #[arg(short, long)]
+    root: bool,
+
     /// Print out all the patterns that match a root project and exit
     #[arg(short, long)]
     print_patterns: bool,
@@ -110,6 +114,11 @@ fn main() -> std::io::Result<()> {
     let root = ParentDirs::new(path.clone())
         .find(|path| looks_like_root(path))
         .unwrap_or(path);
+
+    if cli.root {
+        println!("{}", root.display());
+        return Ok(())
+    }
 
     let project_name = root
         .file_name()
