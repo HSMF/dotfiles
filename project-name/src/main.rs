@@ -91,7 +91,6 @@ fn main() -> std::io::Result<()> {
             ".gitignore",
             "Cargo.lock",
             "node_modules",
-            "*.opam",
             "dune-project",
         ]
         .map(ToOwned::to_owned),
@@ -117,7 +116,7 @@ fn main() -> std::io::Result<()> {
 
     if cli.root {
         println!("{}", root.display());
-        return Ok(())
+        return Ok(());
     }
 
     let project_name = root
